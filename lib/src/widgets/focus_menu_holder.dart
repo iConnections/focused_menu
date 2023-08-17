@@ -144,7 +144,7 @@ class _FocusedMenuHolderState extends State<FocusedMenuHolder> {
               menuOffset: widget.menuOffset ?? 0,
               toolbarActions: widget.toolbarActions,
               enableMenuScroll: widget.enableMenuScroll,
-              additionalLeftOffset: additionalLeftOffset,
+              additionalLeftOffset: widget.additionalLeftOffset,
             ),
           );
         },
