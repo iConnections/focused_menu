@@ -48,6 +48,7 @@ class FocusedMenuHolder extends StatefulWidget {
   final FocusedMenuHolderController? controller;
   final VoidCallback? onOpened;
   final VoidCallback? onClosed;
+  final double additionalLeftOffset;
 
   const FocusedMenuHolder({
     Key? key,
@@ -69,6 +70,7 @@ class FocusedMenuHolder extends StatefulWidget {
     this.controller,
     this.onOpened,
     this.onClosed,
+    this.additionalLeftOffset = 0,
   }) : super(key: key);
 
   @override
@@ -142,6 +144,7 @@ class _FocusedMenuHolderState extends State<FocusedMenuHolder> {
               menuOffset: widget.menuOffset ?? 0,
               toolbarActions: widget.toolbarActions,
               enableMenuScroll: widget.enableMenuScroll,
+              additionalLeftOffset: additionalLeftOffset,
             ),
           );
         },
