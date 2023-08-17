@@ -17,6 +17,7 @@ class FocusedMenuDetails extends StatelessWidget {
   final Color? blurBackgroundColor;
   final double? bottomOffsetHeight;
   final double? menuOffset;
+  final double additionalLeftOffset;
 
   /// Actions to be shown in the toolbar.
   final List<Widget>? toolbarActions;
@@ -39,6 +40,7 @@ class FocusedMenuDetails extends StatelessWidget {
       required this.enableMenuScroll,
       this.bottomOffsetHeight,
       this.menuOffset,
+       this.additionalLeftOffset = 0,
       this.toolbarActions})
       : super(key: key);
 
@@ -78,7 +80,7 @@ class FocusedMenuDetails extends StatelessWidget {
                 )),
             Positioned(
               top: topOffset,
-              left: leftOffset,
+              left: leftOffset + additionalLeftOffset,
               child: TweenAnimationBuilder(
                 duration: Duration(milliseconds: 200),
                 builder: (BuildContext context, dynamic value, Widget? child) {
